@@ -6,7 +6,7 @@ let turn = "X";
 let gameOver = false;
 
 
-bgMusic.play();
+onload.bgMusic.play();
 //Function to change the turn
 const changeTurn = ()=>{
     return turn === "X"? "0": "X";
