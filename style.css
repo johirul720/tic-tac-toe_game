@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bellota+Text:wght@300;400;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@400;500;700&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(14, 7, 43);
+    padding: 10px 0;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+nav ul li{}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+
+}
+/* Main game css */
+.gameContainer{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 40px auto;
+    align-items: center;
+    padding-top: 60px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+.box{
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6.5vw;
+    font-family: 'Roboto', sans-serif;
+    transition: .3s;
+}
+.box:hover{
+	background: #cbf9fc98;
+    cursor: pointer;
+}
+.info{}
+.info h1{
+    font-size: 2.5rem;
+    font-family: 'Bellota Text', cursive;
+    margin-bottom: 20px;
+}
+.btns{
+    text-align: center;
+}
+.btns span {
+	font-size: 1.2rem;
+	margin-right: 24px;
+	background: #7cf1f798;
+	padding: 10px 20px;
+	border-radius: 20px 0 20px 0;
+    font-family: 'Bellota Text', cursive;
+}
+#reset {
+	padding: 10px 38px;
+	font-size: 1.2rem;
+	border: 0;
+	background: gray;
+	color: #fff;
+    border-radius: 20px 0 20px 0;
+    font-family: 'Bellota Text', cursive;
+    cursor: pointer;
+    transition: .4s;
+}
+#reset:hover{
+    background-color: rgb(4, 135, 113);
+    color: #FFF;
+}
+.imgBox {
+	text-align: center;
+}
+.imgBox img {
+	width: 25vw;
+	margin-right: 66px;
+	margin-top: 45px;
+    width: 0;
+    transition: width .3s ease-in-out;
+}
+
+/* utility classes */
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 900px){
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 18vw);
+        grid-template-rows: repeat(3, 18vw);
+        margin-bottom: 40px;
+    }
+    .info h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 450px){
+    .info h1 {
+        font-size: 1.2rem;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 22vw);
+        grid-template-rows: repeat(3, 22vw);
+    }
+}
+@media screen and (max-width: 320px){
+    .btns span {
+        font-size: 1rem;
+        margin-right: 10px;
+        padding: 8px 10px;
+    }
+    #reset{
+        font-size: 1rem;
+        margin-right: 10px;
+        padding: 8px 10px;
+    }
+    .info h1 {
+        font-size: 1rem;
+    }
+}
